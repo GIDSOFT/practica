@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+<record id="pelicula_view_search" model="ir.ui.view">
+			<field name="name">pelicula_view_search</field>
+			<field name="model">gid.cine.pelicula</field>
+			<field name="arch" type="xml">
+				<search string="Titulo Busqueda">
+					<field name="name"/>
+					<field name="duracion"/>
+				</search>
+			</field>
+		</record>
+<!-- Definicion Vista Formulario -->
+		<record id="pelicula_view_form" model="ir.ui.view">
+			<field name="name">pelicula_view_form</field>
+			<field name="model">gid.cine.pelicula</field>
+			<field name="arch" type="xml">
+				<form string="Titulo Formulario">
+					<field name="name"/>
+					<field name="duracion"/>
+					<field name="Genero"/>
+					<field name="sinopsis"/>
+					<field name="imagen"/>
+				</form>
+			</field>
+		</record>
+
+		<!-- Definicio Vista Arbol (Lista) -->
+		<record id="pelicula_view_tree" model="ir.ui.view">
+			<field name="name">pelicula_view_tree</field>
+			<field name="model">gid.cine.pelicula</field>
+			<field name="arch" type="xml">
+				<tree string="">
+					<field name="name"/>
+					<field name="duracion"/>
+					<field name="Genero"/>
+				</tree>
+				<!-- Definicion Comportamiento Vistas Modelo -->
+			<record id="action_pelicula" model="ir.actions.act_window">
+				<field name="name">pelicula</field>
+				<field name="res_model">gid.cine.pelicula</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+		</record>
+		<!-- Indicar submenu que mostrara vistas -->
+		<menuitem action="action_pelicula" id="item_pelicula" name="pelicula" parent="principal_opciones_menu"/>
+	</data>
+	</openerp>

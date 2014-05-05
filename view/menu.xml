@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Acceso desde la barra superior -->
+        <menuitem name="principal" id="principal_menu" sequence="15" />
+        <menuitem name="opciones" id="principal_opciones_menu"  parent="principal_menu" />  
+    </data>
+</openerp>
